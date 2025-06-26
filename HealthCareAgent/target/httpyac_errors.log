@@ -1,0 +1,8 @@
+Request to "http://localhost:8081/fhir/Appointment/availability?date={?}&practitionerId={?}" has missing required parameters:
+
+Query Parameters:
+  - date
+  - practitionerId
+
+
+Please provide values for these parameters before sending the request.

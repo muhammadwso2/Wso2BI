@@ -1,0 +1,13 @@
+
+# Configuration file for "healthcareagent"
+# 
+# This file contains configuration values for configurable variables in your Ballerina code.
+# Both package-specific and imported module configurations are included below.
+# 
+# Learn more about configurable variables:
+# https://ballerina.io/learn/provide-values-to-configurable-variables/#provide-via-toml-syntax
+#
+# Note: This file is automatically added to .gitignore to protect sensitive information. 
+
+openAIApiKey = "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"
+

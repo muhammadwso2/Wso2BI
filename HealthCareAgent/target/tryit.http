@@ -1,0 +1,134 @@
+/*
+### Try Service: 'fhir' (http://localhost:8081/fhir)
+
+*/
+
+/*
+#### GET /Patient
+
+*/
+###
+GET http://localhost:8081/fhir/Patient
+
+/*
+#### GET /Patient/{patientId}
+
+**Path Parameters:**
+- `patientId` [string] (Required)
+
+
+*/
+###
+GET http://localhost:8081/fhir/Patient/{patientId}
+
+/*
+#### GET /Appointment
+
+
+**Query Parameters:**
+- `patientId` [string]
+
+*/
+###
+GET http://localhost:8081/fhir/Appointment?patientId={?}
+
+/*
+#### POST /Appointment
+
+*/
+###
+POST http://localhost:8081/fhir/Appointment
+Content-Type: application/json
+
+# Modify the JSON payload as needed
+#
+# Expected schema:
+#   object
+#   - patientId: string
+#   - practitionerId: string
+#   - startTime: object - Time within some region relative to a
+# time scale stipulated by civilian authorities.
+#   - endTime: object - Time within some region relative to a
+# time scale stipulated by civilian authorities.
+#   - appointmentType: string
+#   - description: string
+#   - location: string
+
+{
+  "patientId": "{?}",
+  "practitionerId": "{?}",
+  "startTime": {},
+  "endTime": {},
+  "appointmentType": "{?}",
+  "description": "{?}",
+  "location": "{?}"
+}
+
+/*
+#### GET /Appointment/{appointmentId}
+
+**Path Parameters:**
+- `appointmentId` [string] (Required)
+
+
+*/
+###
+GET http://localhost:8081/fhir/Appointment/{appointmentId}
+
+/*
+#### PUT /Appointment/{appointmentId}
+
+**Path Parameters:**
+- `appointmentId` [string] (Required)
+
+
+*/
+###
+PUT http://localhost:8081/fhir/Appointment/{appointmentId}
+Content-Type: application/json
+
+# Modify the JSON payload as needed
+#
+# Expected schema:
+#   object
+#   - status: string
+#   - startTime: object - Time within some region relative to a
+# time scale stipulated by civilian authorities.
+#   - endTime: object - Time within some region relative to a
+# time scale stipulated by civilian authorities.
+#   - appointmentType: string
+#   - description: string
+#   - location: string
+
+{
+  "status": "{?}",
+  "startTime": {},
+  "endTime": {},
+  "appointmentType": "{?}",
+  "description": "{?}",
+  "location": "{?}"
+}
+
+/*
+#### DELETE /Appointment/{appointmentId}
+
+**Path Parameters:**
+- `appointmentId` [string] (Required)
+
+
+*/
+###
+DELETE http://localhost:8081/fhir/Appointment/{appointmentId}
+
+/*
+#### GET /Appointment/availability
+
+
+**Query Parameters:**
+- `date` [string] (Required)
+- `practitionerId` [string]
+
+*/
+###
+GET http://localhost:8081/fhir/Appointment/availability?date={?}&practitionerId={?}
+
