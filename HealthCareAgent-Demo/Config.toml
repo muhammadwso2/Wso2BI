@@ -1,0 +1,14 @@
+
+# Configuration file for "healthcareagent_demo"
+# 
+# This file contains configuration values for configurable variables in your Ballerina code.
+# Both package-specific and imported module configurations are included below.
+# 
+# Learn more about configurable variables:
+# https://ballerina.io/learn/provide-values-to-configurable-variables/#provide-via-toml-syntax
+#
+# Note: This file is automatically added to .gitignore to protect sensitive information. 
+
+openAIApiKey = ""
+fhirMcpUrl = "https://c32618cf-389d-44f1-93ee-b67a3468aae3-dev.e1-us-east-azure.choreoapis.dev/fhir-mcp-server/fhir-mcp-server/v1.0/mcp"
+smsURL = "http://localhost"
