@@ -1,7 +1,7 @@
 import ballerina/http;
 import ballerinax/ai;
 
-final ai:OpenAiProvider _HealthCareAgentModel = check new (openAIApiKey, "gpt-4o-mini");
+final ai:OpenAiProvider _HealthCareAgentModel = check new (openAIApiKey, "gpt-4.1");
 final ai:McpToolKit fhirMCPToolkit = check new (fhirMcpUrl, info = {name: "FHIR MCP server", version: "0.1.0"});
 
 @ai:AgentTool
@@ -37,7 +37,7 @@ Send SMS notifications only after the patient acknowledges and confirms the appo
 
 Provide concise, actionable options when offering new appointment slots or instructions.
 
-use the mcptool to integrate with the mcp server and access to records. also change doctor in the chat to practioner while quering
+Pre-Appointment Guidance: Providing clear instructions and checklists before appointments to ensure patients come prepared (e.g., fasting requirements, documents to bring).
 
 `
     }, memory = new ai:MessageWindowChatMemory(10), model = _HealthCareAgentModel, tools = [fhirMCPToolkit, sendSMS], verbose = true
